@@ -3,10 +3,10 @@ import re
 import requests
 import sys
 import json
-parser = argparse.ArgumentParser(description='Take MAC Address as input, API Key as well if required')
+parser = argparse.ArgumentParser()
 
-parser.add_argument("-mac", type=str, action="store", dest="mac", help="Please provide a valid MAC address")
-parser.add_argument("-apikey", type=str, action="store", dest="apikey", default='at_5KCCwxRxbucCOKt2M4WyLX9KRzAdK', help="Please provide a valid API Key")
+parser.add_argument("-mac", type=str, action="store", dest="mac", help="Enter a valid MAC address")
+parser.add_argument("-apikey", type=str, action="store", dest="apikey", default='at_5KCCwxRxbucCOKt2M4WyLX9KRzAdK', help="Enter a valid API Key")
 
 results = parser.parse_args()
 mac = results.mac
