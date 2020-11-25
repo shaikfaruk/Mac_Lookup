@@ -7,3 +7,28 @@ If you don't have docker, follow the steps in this link https://docs.docker.com/
 Follow to below steps to install Git in your linux machine.  
 `sudo apt update`  
 `sudo apt install git`  
+# How to use..  
+1. **Clone it from github**  
+Run the following command in your terminal to clone it.  
+`git clone https://github.com/shaikfaruk/Mac_Lookup.git`  
+2. **Build the docker image**  
+Follow the below commands to build the docker image.  
+`cd Mac_Lookup/`  
+`docker build . -t mac_lookup`  
+3. **Run the container**  
+Below command runs the container with help argument, which says what are things are need to be passed as input.  
+`docker run -it mac_lookup -h`  
+```  
+root@shasd:/home/shasd/Mac_Lookup# docker run -it mac_lookup -h  
+usage: rest_api.py [-h] [-mac MAC] [-apikey APIKEY]  
+Take MAC Address as input, API Key as well if required  
+optional arguments:  
+  -h, --help      show this help message and exit  
+  -mac MAC        Please provide a valid MAC address  
+  -apikey APIKEY  Please provide a valid API Key  
+  ```  
+Run command:  
+`docker run -it mac_lookup -mac <mac_address> -apikey <api_key_value>`  
+apikey is optional.  
+Example:
+`docker run -it mac_lookup -mac 00:00:48:00:00:ad`  
