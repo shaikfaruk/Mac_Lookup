@@ -26,11 +26,10 @@ Below command runs the container with help argument, which says what are things 
 ```  
 root@shasd:/home/shasd/Mac_Lookup# docker run -it mac_lookup -h  
 usage: rest_api.py [-h] [-mac MAC] [-apikey APIKEY]  
-Take MAC Address as input, API Key as well if required  
 optional arguments:  
   -h, --help      show this help message and exit  
-  -mac MAC        Please provide a valid MAC address  
-  -apikey APIKEY  Please provide a valid API Key  
+  -mac MAC        Enter a valid MAC address  
+  -apikey APIKEY  Enter a valid API Key  
   ```  
  # About this application.  
  * It checks for **HTTP Error**, **Connection Error**, and **Timeout Error**.  
